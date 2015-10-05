@@ -1,7 +1,7 @@
 A Steam trading platform that allows users to exchange using credits.
 
-Written in PHP, HTML, JQuery, and CSS.
+Written in PHP, HTML, jQuery, and CSS.
 
 Contributors:
 
-Jack Eller - admin@kilobear.com 
+Jack Eller - jheguy2@gmail.com
