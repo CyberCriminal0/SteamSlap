@@ -8,7 +8,7 @@ $version = 0.1;
 <title>
 Steam Site
 </title>
-
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
