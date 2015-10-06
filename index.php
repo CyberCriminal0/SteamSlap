@@ -16,7 +16,7 @@ Steam Site
 
 <p>
 Testing fonts, site version is:
-<?p
+<?php
 echo version;
 ?>
 </p>
