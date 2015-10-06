@@ -1,4 +1,15 @@
 <?php 
 $output = shell_exec('git pull');
-echo "<p>$output</p>";
+
 ?>
+<html>
+<body>
+<p>
+<?php
+echo $output;
+?>
+</p>
+</body>
+</html>
+
+
