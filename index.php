@@ -14,12 +14,12 @@ Steam Site
 
 <body>
 
-<p>
+<h1>
 Testing fonts, site version is:
 <?php
-echo version;
+echo $version;
 ?>
-</p>
+</h1>
 
 </body>
 </html>
