@@ -15,6 +15,7 @@ Steam Site
 <body>
 
 <p>
+Testing fonts, site version is:
 <?p
 echo version;
 ?>
