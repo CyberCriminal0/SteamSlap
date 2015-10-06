@@ -16,7 +16,7 @@ Steam Site
 <body>
 
 <h1>
-testing fonts, and git deployment site version is:
+IT'S ALIVE!!! testing fonts, and git deployment site version is:
 <?php
 echo $version;
 ?>
