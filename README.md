@@ -1,4 +1,6 @@
-A Steam trading platform that allows users to exchange using credits.
+SteamSlap, a Steam trading platform that allows users to exchange using credits.
+
+https://steamslap.com
 
 Written in PHP, HTML, jQuery, and CSS.
 
