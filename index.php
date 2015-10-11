@@ -19,12 +19,14 @@ Steam Site
 <body>
 <script src="libs/jquery-2.1.4.min.js">
 <script src="js/bootstrap.min.js"></script>
+<div align="center">
 <h1>
 testing fonts, and git deployment site version is:
 <?php
 echo $version;
 ?>
 </h1>
+</div>
 
 </body>
 </html>
