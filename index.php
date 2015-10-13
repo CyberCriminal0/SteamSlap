@@ -1,4 +1,5 @@
 <?php
+require 'steamauth/steamauth.php';
 $version = 0.2;
 ?>
 <html lang="en">
@@ -35,6 +36,18 @@ script src="libs/jquery-2.1.4.min.js">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#login">Login</a></li>
+            <li>
+		<?php
+			if(!isset($_SESSION['steamid'])) {
+    			   echo steamlogin(); //login button
+
+			}  else {
+			    include ('steamauth/userInfo.php'); //To access the $steamprofile array
+    			//Protected content
+			    logoutbutton(); //Logout Button
+			}
+		?>
+	  </li>
           </ul>
         </div>
       </div>
