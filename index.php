@@ -14,7 +14,7 @@ Steam Site
 </title>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <link href="css/bootstrap.min.css" rel="stylesheet">
-script src="libs/jquery-2.1.4.min.js">
+<script src="libs/jquery-2.1.4.min.js"/>
 <script src="js/bootstrap.min.js"></script>
 </head>
 
