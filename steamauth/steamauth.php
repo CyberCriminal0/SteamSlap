@@ -20,11 +20,11 @@ try {
     
     if(!$openid->mode) {
         if(isset($_GET['login'])) {
-            $openid->identity = 'http://steamcommunity.com/openid';
+            $openid->identity = 'https://steamcommunity.com/openid';
             header('Location: ' . $openid->authUrl());
         }
 
-    return "<form action=\"?login\" method=\"post\"> <input type=\"image\" src=\"http://cdn.steamcommunity.com/public/images/signinthroughsteam/sits_".$button.".png\"></form>";
+    return "<form action=\"?login\" method=\"post\"> <input type=\"image\" src=\"/images/loginSteam.png\"></form>";
     }
 
      elseif($openid->mode == 'cancel') {
@@ -32,7 +32,7 @@ try {
     } else {
         if($openid->validate()) { 
                 $id = $openid->identity;
-                $ptn = "/^http:\/\/steamcommunity\.com\/openid\/id\/(7[0-9]{15,25}+)$/";
+                $ptn = "/^https:\/\/steamcommunity\.com\/openid\/id\/(7[0-9]{15,25}+)$/";
                 preg_match($ptn, $id, $matches);
               
                 $_SESSION['steamid'] = $matches[1]; 
