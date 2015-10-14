@@ -16,7 +16,6 @@ Steam Site
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <script src="libs/jquery-2.1.4.min.js"/>
 <script src="js/bootstrap.min.js"></script>
-</head>
 
 
 <style>
@@ -34,6 +33,9 @@ html {
 
 </style>
 
+
+
+</head>
 
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
