@@ -45,6 +45,7 @@ script src="libs/jquery-2.1.4.min.js">
 			    include ('steamauth/userInfo.php'); //To access the $steamprofile array
     			//Protected content
 			    logoutbutton(); //Logout Button
+			
 			}
 		?>
 	  </li>
