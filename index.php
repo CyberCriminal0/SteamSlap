@@ -19,7 +19,23 @@ Steam Site
 </head>
 
 
-<body background="images/vapor.gif">
+<style>
+
+{ margin: 0; padding: 0; }
+
+html { 
+        background: url('images/vapor.gif') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+
+
+</style>
+
+
+<body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
