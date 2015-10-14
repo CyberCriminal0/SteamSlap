@@ -14,11 +14,9 @@ Steam Site
 </title>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <link href="css/bootstrap.min.css" rel="stylesheet">
-script src="libs/jquery-2.1.4.min.js">
+<script src="libs/jquery-2.1.4.min.js"/>
 <script src="js/bootstrap.min.js"></script>
 </head>
-
-
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -36,7 +34,9 @@ script src="libs/jquery-2.1.4.min.js">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#login">Login</a></li>
-            <li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+		<li>
 		<?php
 			if(!isset($_SESSION['steamid'])) {
     			   echo steamlogin(); //login button
@@ -48,8 +48,8 @@ script src="libs/jquery-2.1.4.min.js">
 			
 			}
 		?>
-	  </li>
-          </ul>
+		</li>
+		</ul>
         </div>
       </div>
     </nav>
