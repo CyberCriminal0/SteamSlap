@@ -24,7 +24,7 @@ try {
             header('Location: ' . $openid->authUrl());
         }
 
-    return "<form action=\"?login\" method=\"post\"> <input type=\"image\" src=\"../images/loginSteam.png"></form>";
+    return "<form action=\"?login\" method=\"post\"> <input type=\"image\" src=\"../images/loginSteam.png\"></form>";
     }
 
      elseif($openid->mode == 'cancel') {
