@@ -16,27 +16,7 @@ Steam Site
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <script src="libs/jquery-2.1.4.min.js"/>
 <script src="js/bootstrap.min.js"></script>
-
-
-<style>
-
-{ margin: 0; padding: 0; }
-
-html { 
-        background: url('images/vapor.gif') no-repeat center center fixed; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-}
-
-
-</style>
-
-
-
 </head>
-
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
