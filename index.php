@@ -36,7 +36,8 @@ script src="libs/jquery-2.1.4.min.js">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#login">Login</a></li>
-            <li class="pull-right">
+		</ul>
+		<div class="navbar-brand">
 		<?php
 			if(!isset($_SESSION['steamid'])) {
     			   echo steamlogin(); //login button
@@ -48,8 +49,7 @@ script src="libs/jquery-2.1.4.min.js">
 			
 			}
 		?>
-	  </li>
-          </ul>
+	</div>
         </div>
       </div>
     </nav>
