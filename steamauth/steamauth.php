@@ -4,8 +4,9 @@ session_start();
 require ('openid.php');
 
 function logoutbutton() {
-    echo "<form action=\"steamauth/logout.php\" method=\"post\"><input value=\"Logout\" type=\"submit\" /></form>"; //logout button
-    //echo '<img src="'.$_SESSION['steam_avatarfull'].'"/>';
+    echo '<li><h1>'.$_SESSION['steam_personaname'].'</h1></li>';
+    echo '<li><img src="'.$_SESSION['steam_avatarmedium'].'"/></li>';
+    //echo "<form action=\"steamauth/logout.php\" method=\"post\"><input value=\"Logout\" type=\"submit\" /></form>"; //logout button
 }
 
 function steamlogin()
@@ -21,7 +22,7 @@ try {
     
     if(!$openid->mode) {
         if(isset($_GET['login'])) {
-            $openid->identity = 'https://steamcommunity.com/openid';
+            $openid->identity = 'http://steamcommunity.com/openid';
             header('Location: ' . $openid->authUrl());
         }
 
@@ -33,7 +34,7 @@ try {
     } else {
         if($openid->validate()) { 
                 $id = $openid->identity;
-                $ptn = "/^https:\/\/steamcommunity\.com\/openid\/id\/(7[0-9]{15,25}+)$/";
+                $ptn = "/^http:\/\/steamcommunity\.com\/openid\/id\/(7[0-9]{15,25}+)$/";
                 preg_match($ptn, $id, $matches);
               
                 $_SESSION['steamid'] = $matches[1]; 
