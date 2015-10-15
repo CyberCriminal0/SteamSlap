@@ -43,9 +43,11 @@ Steam Site
 
 			}  else {
 			    include ('steamauth/userInfo.php'); //To access the $steamprofile array
+
+	 		    echo '<img src="$steamprofile['avatarfull']">';
+
     			//Protected content
 			    logoutbutton(); //Logout Button
-			    echo "<img src="$steamprofile['avatarfull']">";			
 			}
 		?>
 		</li>
