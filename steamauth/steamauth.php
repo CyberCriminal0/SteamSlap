@@ -5,7 +5,7 @@ require ('openid.php');
 
 function logoutbutton() {
     echo "<form action=\"steamauth/logout.php\" method=\"post\"><input value=\"Logout\" type=\"submit\" /></form>"; //logout button
-    //echo "<img src=\"$_SESSION['steam_avatarfull']\">";
+    echo '<img src="'.$_SESSION['steam_avatarfull'].'"/>';
 }
 
 function steamlogin()
