@@ -32,8 +32,13 @@ Steam Site
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#login">Login</a></li>
+		<?php
+                        if(!isset($_SESSION['steamid'])) {
+                        }  else {
+				echo '<li><a href="account.php">My Account</a></li>';
+				echo '<li><a href="steamauth/logout.php">Logout</a></li>'; //logout button
+                        }
+                ?>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
 		<li>
