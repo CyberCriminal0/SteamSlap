@@ -1,7 +1,7 @@
 <?php
 require 'steamauth/steamauth.php';
 $version = 0.2;
-include 'db.php';
+require_once('db.php');
 ?>
 <html lang="en">
 
