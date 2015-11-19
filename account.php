@@ -1,6 +1,11 @@
 <?php
 require 'steamauth/steamauth.php';
 $version = 0.2;
+
+if(!isset($_SESSION['steamid'])) {
+header("Location: login.php");
+die();                        
+
 ?>
 <html lang="en">
 
@@ -62,7 +67,7 @@ SteamSlap
     <div class="container">
 
       <div class="starter-template">
-        <h1>Welcome to SteamSlap!</h1>
+        <h1>Welcome to the accounts page</h1>
         <p class="lead">We are currently in development,<br> as of now we are at version: <?php echo $version ?></p>
       </div>
 
