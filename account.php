@@ -1,11 +1,7 @@
 <?php
 require 'steamauth/steamauth.php';
 $version = 0.2;
-
-if(!isset($_SESSION['steamid'])) {
-header("Location: login.php");
-die();                        
-
+include 'db.php';
 ?>
 <html lang="en">
 
@@ -17,6 +13,16 @@ die();
 <title>
 SteamSlap
 </title>
+
+<?php
+
+if (!isset($_SESSION['steamid']))
+{
+    header("Location: /");
+    die();
+}
+?>
+
 <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="styles.css" rel="stylesheet">
@@ -69,6 +75,17 @@ SteamSlap
       <div class="starter-template">
         <h1>Welcome to the accounts page</h1>
         <p class="lead">We are currently in development,<br> as of now we are at version: <?php echo $version ?></p>
+<?php
+// Create connection
+$conn = new mysqli($db_url, $db_user, $db_pass);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+echo "Connected successfully";
+?>
+
       </div>
 
     </div>

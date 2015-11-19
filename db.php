@@ -1,6 +1,10 @@
 <?php 
-define("db_url", "127.0.0.1"); 
-define("db_db", "steam");
-define("db_user", "steam");
-define("db_pass", "steam");
+//define("db_url", "localhost"); 
+//define("db_db", "steam");
+//define("db_user", "steam");
+//define("db_pass", "steam");
+$db_url = "localhost";
+$db_user = "steam";
+$db_pass = "steam";
+
 ?>
