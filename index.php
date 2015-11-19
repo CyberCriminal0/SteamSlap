@@ -14,6 +14,7 @@ Steam Site
 </title>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="styles.css" rel="stylesheet">
 <script src="libs/jquery-2.1.4.min.js"/>
 <script src="js/bootstrap.min.js"></script>
 </head>
@@ -27,11 +28,11 @@ Steam Site
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">SteamSlap</a>
+          <a class="navbar-brand" href="/">SteamSlap</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="/">Home</a></li>
 		<?php
                         if(!isset($_SESSION['steamid'])) {
                         }  else {
