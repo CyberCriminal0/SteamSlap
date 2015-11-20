@@ -67,6 +67,20 @@ SteamSlap
         <h1>Welcome to SteamSlap!</h1>
         <p class="lead">We are currently in development,<br> as of now we are at version: <?php echo $version ?></p>
       </div>
+	
+	<h2>Recent Users</h2>
+<?php
+	try{
+        $recent = $db->query("SELECT * FROM users ORDER BY id DESC;");
+        } catch (PDOException $e) {
+
+        echo $e->getMessage();
+        die();
+        }
+	while ($row = $recent->fetch(PDO::FETCH_ASSOC)) {
+        echo $row['name'].'<img src='.$row['avatar'].' style="width:100px;height:100px;"></img><br/>';
+	}
+?>
 
     </div>
 </body>
