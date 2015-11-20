@@ -1,4 +1,7 @@
 <?php
+
+require_once('db.php');
+
     if(!$_SESSION['steamid'] == ""){
     	include("settings.php");
         if (empty($_SESSION['steam_uptodate']) or $_SESSION['steam_uptodate'] == false or empty($_SESSION['steam_personaname'])) {
@@ -36,7 +39,38 @@
         $steamprofile['realname'] = $_SESSION['steam_realname'];
         $steamprofile['primaryclanid'] = $_SESSION['steam_primaryclanid'];
         $steamprofile['timecreated'] = $_SESSION['steam_timecreated'];
+	
+	$id = $steamprofile['steamid'];
+	$name = $steamprofile['personaname'];
+	$avatar = $steamprofile['avatarfull'];
+	try{
+	$check = $db->query("SELECT * FROM users WHERE sid='$id'");
+	} catch (PDOException $e) {
 
+        echo $e->getMessage();
+	die();
+        }
+	
+	$isgood = $check->fetch(PDO::FETCH_NUM);
+
+	if($isgood[0]>=1)
+	{
+	
+	}
+	else
+	{
+	try{
+	$newUser->bindValue(':sid', $id, PDO::PARAM_STR);
+	$newUser->bindValue(':name', $name, PDO::PARAM_STR);
+	$newUser->bindValue(':avatar', $avatar, PDO::PARAM_STR);
+	$newUser->execute();
+
+	} catch (PDOException $e) {
+
+	echo $e->getMessage();
+
+	}
+	}
     }
 ?>
     

@@ -75,15 +75,10 @@ if (!isset($_SESSION['steamid']))
       <div class="starter-template">
         <h1>Welcome to the accounts page</h1>
         <p class="lead">We are currently in development,<br> as of now we are at version: <?php echo $version ?></p>
-<?php
-// Create connection
-$conn = new mysqli($db_url, $db_user, $db_pass);
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-echo "Connected successfully";
+<?php
+echo $steamprofile['steamid'];
+
 ?>
 
       </div>
