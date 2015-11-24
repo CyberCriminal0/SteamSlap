@@ -55,7 +55,10 @@ require_once('db.php');
 
 	if($isgood[0]>=1)
 	{
-	
+  	$updateUser->bindParam(':name', $name, PDO::PARAM_STR);
+        $updateUser->bindParam(':sid', $id, PDO::PARAM_STR);
+        $updateUser->bindParam(':avatar', $avatar, PDO::PARAM_STR);
+        $updateUser->execute();
 	}
 	else
 	{

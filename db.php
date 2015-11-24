@@ -27,7 +27,7 @@ $dbdsn = 'mysql:host=localhost;dbname=steam';
 try {
     $db = new PDO($dbdsn, $db_user, $db_pass);
     $newUser = $db->prepare("INSERT INTO users (sid, name, avatar) VALUES (:sid, :name, :avatar)");
-
+    $updateUser = $db->prepare("UPDATE users SET name = :name, avatar = :avatar WHERE sid = :sid");
 } catch (PDOException $e) {
     echo 'Connection failed: ' . $e->getMessage();
 }
