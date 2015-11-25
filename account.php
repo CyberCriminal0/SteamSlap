@@ -2,7 +2,6 @@
 require 'steamauth/steamauth.php';
 $version = 0.2;
 require_once('db.php');
-
 ?>
 <html lang="en">
 
@@ -14,10 +13,20 @@ require_once('db.php');
 <title>
 SteamSlap
 </title>
+
+<?php
+
+if (!isset($_SESSION['steamid']))
+{
+    header("Location: /");
+    die();
+}
+?>
+
 <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="styles.css" rel="stylesheet">
-<script src="libs/jquery-2.1.4.min.js"></script>
+<script src="libs/jquery-2.1.4.min.js"/>
 <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -37,10 +46,8 @@ SteamSlap
 		<?php
                         if(!isset($_SESSION['steamid'])) {
                         }  else {
-                                echo '<li><a href="market.php">Market</a></li>';
+				echo '<li><a href="market.php">Market</a></li>';
                                 echo '<li><a href="trade.php">Trade</a></li>';
-				//echo '<li><a href="account.php">My Account</a></li>';
-				//echo '<li><a href="steamauth/logout.php">Logout</a></li>'; //logout button
                         }
                 ?>
 		</ul>
@@ -65,30 +72,16 @@ SteamSlap
     <div class="container">
 
       <div class="starter-template">
-        <h1>Welcome to SteamSlap!</h1>
+        <h1>Welcome to the accounts page</h1>
         <p class="lead">We are currently in development,<br> as of now we are at version: <?php echo $version ?></p>
-      </div>
-      </div>	
-<div class="container text-right pull-right">
-	<h2>Recent Users</h2>
-<div>
-<div class="row">
 
 <?php
-	try{
-        $recent = $db->query("SELECT * FROM users ORDER BY id DESC LIMIT 5;");
-        } catch (PDOException $e) {
+echo $steamprofile['steamid'];
 
-        echo $e->getMessage();
-        die();
-        }
-	while ($row = $recent->fetch(PDO::FETCH_ASSOC)) {
-        echo '<div class="col-xs-1 col-sm-push-8 col-xs-push-8"><div class = "thumbnail"><div class="column"><img src='.$row['avatar'].' style="height:auto; width:100%;"></img></div></div><div class = "caption"><p style="margin-top: -20px">'.$row['name'].'</p></div></div>';
-	}
 ?>
-</div>
-</div>
-</div>
+
+      </div>
+
     </div>
 </body>
 </html>
