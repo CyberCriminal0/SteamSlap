@@ -4,8 +4,8 @@ session_start();
 require ('openid.php');
 
 function logoutbutton() {
-    echo '<li><h1 style="color:white">'.$_SESSION['steam_personaname'].'</h1></li>';
-    echo '<li><img src="'.$_SESSION['steam_avatarmedium'].'"/></li>';
+    echo '<li><h3 style="color:white">Hello, '.$_SESSION['steam_personaname'].'</h3></li>';
+    echo '<li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown"><img src="'.$_SESSION['steam_avatarmedium'].'" style="max-width:50px; margin-top: -5px;" class="profile-image img-circle""/><b class="caret"></b></a><ul class="dropdown-menu"><li><a href="account.php"><i class="glyphicon glyphicon-cog"></i> Account</a></li><li class="divider"></li><li><a href="steamauth/logout.php"><i class="glyphicon glyphicon-off"></i> Sign-out</a></li></ul></li>';
     //echo "<form action=\"steamauth/logout.php\" method=\"post\"><input value=\"Logout\" type=\"submit\" /></form>"; //logout button
 }
 

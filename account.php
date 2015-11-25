@@ -43,12 +43,11 @@ if (!isset($_SESSION['steamid']))
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home</a></li>
 		<?php
                         if(!isset($_SESSION['steamid'])) {
                         }  else {
-				echo '<li><a href="account.php">My Account</a></li>';
-				echo '<li><a href="steamauth/logout.php">Logout</a></li>'; //logout button
+				echo '<li><a href="market.php">Market</a></li>';
+                                echo '<li><a href="trade.php">Trade</a></li>';
                         }
                 ?>
 		</ul>

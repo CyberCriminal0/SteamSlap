@@ -17,7 +17,7 @@ SteamSlap
 <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="styles.css" rel="stylesheet">
-<script src="libs/jquery-2.1.4.min.js"/>
+<script src="libs/jquery-2.1.4.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -34,12 +34,13 @@ SteamSlap
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home</a></li>
 		<?php
                         if(!isset($_SESSION['steamid'])) {
                         }  else {
-				echo '<li><a href="account.php">My Account</a></li>';
-				echo '<li><a href="steamauth/logout.php">Logout</a></li>'; //logout button
+                                echo '<li><a href="market.php">Market</a></li>';
+                                echo '<li><a href="trade.php">Trade</a></li>';
+				//echo '<li><a href="account.php">My Account</a></li>';
+				//echo '<li><a href="steamauth/logout.php">Logout</a></li>'; //logout button
                         }
                 ?>
 		</ul>
@@ -82,7 +83,7 @@ SteamSlap
         die();
         }
 	while ($row = $recent->fetch(PDO::FETCH_ASSOC)) {
-        echo '<div class="col-xs-1 col-sm-push-8 col-xs-push-8"><div class = "thumbnail"><div class="column"><img src='.$row['avatar'].' style="height:auto; width:100%;"></img></div></div><div class = "caption"><p>'.$row['name'].'</p></div></div>';
+        echo '<div class="col-xs-1 col-sm-push-8 col-xs-push-8"><div class = "thumbnail"><div class="column"><img src='.$row['avatar'].' style="height:auto; width:100%;"></img></div></div><div class = "caption"><p style="margin-top: -20px">'.$row['name'].'</p></div></div>';
 	}
 ?>
 </div>
