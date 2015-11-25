@@ -50,7 +50,6 @@ require_once('db.php');
         echo $e->getMessage();
 	die();
         }
-	
 	$isgood = $check->fetch(PDO::FETCH_NUM);
 
 	if($isgood[0]>=1)
@@ -76,4 +75,3 @@ require_once('db.php');
 	}
     }
 ?>
-    
