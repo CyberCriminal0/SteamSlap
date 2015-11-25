@@ -18,6 +18,9 @@ CREATE TABLE `users` (
 //define("db_db", "steam");
 //define("db_user", "steam");
 //define("db_pass", "steam");
+
+$version = 0.3;
+
 $db_host = "localhost";
 $db_user = "steam";
 $db_pass = "steam";

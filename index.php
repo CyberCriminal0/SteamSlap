@@ -1,6 +1,5 @@
 <?php
 require 'steamauth/steamauth.php';
-$version = 0.2;
 require_once('db.php');
 
 ?>
